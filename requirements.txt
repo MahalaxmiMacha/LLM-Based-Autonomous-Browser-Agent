@@ -3,11 +3,9 @@ browser-use
 playwright
 deep-translator
 SpeechRecognition
-PyAudio
 pyttsx3
 python-dotenv
 gTTS
-playsound==1.2.2
 langchain-openai
 langchain-google-genai
 pdfplumber
