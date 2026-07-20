@@ -1,0 +1,6 @@
+users.json 
+resume.pdf 
+*.pdf 
+__pycache__/ 
+venv/ 
+.env 
