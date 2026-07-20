@@ -2,10 +2,6 @@ import threading
 import tempfile
 import os
 import re
-from deep_translator import GoogleTranslator
-from gtts import gTTS
-import playsound
-import pyttsx3
 
 GTTS_LANG_CODES = {
     "English": "en",
@@ -46,6 +42,7 @@ def speak_sync(text: str, language: str = "English"):
     # Translate if target language is not English
     if language != "English":
         try:
+            from deep_translator import GoogleTranslator
             target_code = GTTS_LANG_CODES.get(language, "en")
             cleaned = GoogleTranslator(source="auto", target=target_code).translate(cleaned)
         except Exception as e:
@@ -53,12 +50,14 @@ def speak_sync(text: str, language: str = "English"):
 
     # Generate and run with gTTS
     try:
+        from gtts import gTTS
+        import playsound as ps
         lang_code = GTTS_LANG_CODES.get(language, "en")
         tts = gTTS(text=cleaned, lang=lang_code, slow=False)
         with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as fp:
             temp_path = fp.name
         tts.save(temp_path)
-        playsound.playsound(temp_path)
+        ps.playsound(temp_path)
         try:
             os.remove(temp_path)
         except Exception:
@@ -69,6 +68,7 @@ def speak_sync(text: str, language: str = "English"):
 
     # Final fallback: pyttsx3
     try:
+        import pyttsx3
         engine = pyttsx3.init()
         engine.say(cleaned)
         engine.runAndWait()
