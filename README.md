@@ -287,18 +287,6 @@ Review the result and approve final submission if required.
 
 ---
 
-# 👩‍💻 Author
-
-**Mahalaxmi Macha**
-
-B.Tech Computer Science Engineering
-
-GitHub: https://github.com/MahalaxmiMacha
-
----
-
-<div align="center">
-
 ### ⭐ If you found this project useful, consider giving it a star on GitHub!
 
 </div>
