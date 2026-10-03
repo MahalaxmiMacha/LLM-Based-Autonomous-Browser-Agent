@@ -287,12 +287,6 @@ Review the result and approve final submission if required.
 
 ---
 
-# 📄 License
-
-This project is released under the **MIT License**.
-
----
-
 # 👩‍💻 Author
 
 **Mahalaxmi Macha**
