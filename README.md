@@ -68,39 +68,6 @@ The project demonstrates how modern LLMs can be integrated with browser automati
 
 ---
 
-# 🏗️ System Architecture
-
-```text
-                         User
-                           │
-                           ▼
-                 Streamlit Web Interface
-                           │
-                           ▼
-                 Authentication & Profile
-                           │
-                           ▼
-              Language Translation Layer
-                           │
-                           ▼
-                    Task Router
-        ┌──────────┬──────────┬─────────┐
-        ▼          ▼          ▼         ▼
-   LinkedIn     YouTube   WhatsApp  General
-     Agent        Agent      Agent     Agent
-        │
-        ▼
- Browser Automation (browser-use + Playwright)
-        │
-        ▼
- OpenAI GPT-4o / Google Gemini
-        │
-        ▼
- Browser Actions & Responses
-```
-
----
-
 # 📂 Project Structure
 
 ```text
